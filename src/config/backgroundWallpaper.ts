@@ -54,7 +54,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 是否允许用户通过控制面板切换横幅标题显示
 			switchable: true,
 			// 主页横幅主标题
-			title: "AI 工具与科技实践",
+			title: "AI工具与变现实战",
 			// 主页横幅主标题字体大小
 			titleSize: "3.4rem",
 			// 主页横幅副标题
