@@ -188,7 +188,7 @@ const managerConfigStr = JSON.stringify({
         var extra = config.meting.extra || [];
         for (var i = 0; i < extra.length; i++) {
             var extraSongs = await fetchMetingSource(extra[i]);
-            playlist = playlist.concat(extraSongs);
+            playlist = extraSongs.concat(playlist);
         }
 
         if (playlist.length > 0) {
