@@ -1,0 +1,50 @@
+---
+import MyContentPage from "@/components/pages/my/MyContentPage.astro";
+
+const sections = [
+	{
+		title: "已公开项目",
+		description: "先放已经能访问或正在维护的项目，后面可以继续补截图和详细复盘。",
+		items: [
+			{
+				title: "个人博客",
+				description: "基于 Astro 的个人博客，用来记录技术实践、AI 工具和生活思考。",
+				icon: "material-symbols:article-outline-rounded",
+				link: "https://blog.xzggai.com/",
+				linkText: "访问博客",
+				tags: ["Astro", "Vercel", "内容站"],
+			},
+			{
+				title: "AI 内容工作流",
+				description: "围绕选题、资料整理、写作、发布和复盘搭建的内容生产流程。",
+				icon: "material-symbols:automation",
+				tags: ["AI 写作", "自动化", "内容生产"],
+			},
+		],
+	},
+	{
+		title: "整理中的项目",
+		items: [
+			{
+				title: "工具型小站",
+				description: "适合把常用脚本、查询工具和自动化流程整理成独立页面。",
+				icon: "material-symbols:construction-rounded",
+				tags: ["工具", "效率"],
+			},
+			{
+				title: "项目复盘",
+				description: "每个项目保留目标、实现方式、踩坑记录和下一步计划。",
+				icon: "material-symbols:fact-check-outline-rounded",
+				tags: ["复盘", "经验"],
+			},
+		],
+	},
+];
+---
+
+<MyContentPage
+	title="我的项目"
+	description="这里整理我做过、正在做和计划公开的项目。"
+	icon="material-symbols:apps"
+	sections={sections}
+/>

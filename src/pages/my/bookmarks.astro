@@ -1,0 +1,67 @@
+---
+import MyContentPage from "@/components/pages/my/MyContentPage.astro";
+
+const sections = [
+	{
+		title: "开发文档",
+		items: [
+			{
+				title: "OpenAI Docs",
+				description: "OpenAI API、模型、工具调用和开发者指南。",
+				icon: "material-symbols:description-outline-rounded",
+				link: "https://developers.openai.com/",
+				linkText: "打开",
+				tags: ["AI", "API"],
+			},
+			{
+				title: "Astro Docs",
+				description: "博客使用的静态站点框架文档。",
+				icon: "material-symbols:rocket-launch-outline-rounded",
+				link: "https://docs.astro.build/",
+				linkText: "打开",
+				tags: ["Astro", "前端"],
+			},
+			{
+				title: "Vercel Docs",
+				description: "部署、域名、环境变量和构建问题排查。",
+				icon: "material-symbols:cloud",
+				link: "https://vercel.com/docs",
+				linkText: "打开",
+				tags: ["部署", "Vercel"],
+			},
+			{
+				title: "GitHub",
+				description: "源码管理、Issue、Actions 和开源项目检索。",
+				icon: "fa7-brands:github",
+				link: "https://github.com/",
+				linkText: "打开",
+				tags: ["代码", "协作"],
+			},
+		],
+	},
+	{
+		title: "内容与运营",
+		items: [
+			{
+				title: "关键词与选题库",
+				description: "后续可放 SEO、行业资料、竞品观察和选题清单。",
+				icon: "material-symbols:manage-search-rounded",
+				tags: ["SEO", "选题"],
+			},
+			{
+				title: "素材与灵感",
+				description: "后续可放图标、配色、封面参考和文章素材来源。",
+				icon: "material-symbols:palette",
+				tags: ["设计", "素材"],
+			},
+		],
+	},
+];
+---
+
+<MyContentPage
+	title="收藏导航"
+	description="整理我常用的开发、AI、内容和运营资源。"
+	icon="material-symbols:bookmark-manager-outline-rounded"
+	sections={sections}
+/>

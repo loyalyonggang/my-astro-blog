@@ -1,0 +1,59 @@
+---
+import MyContentPage from "@/components/pages/my/MyContentPage.astro";
+
+const sections = [
+	{
+		title: "开发与部署",
+		items: [
+			{
+				title: "本地环境",
+				description: "macOS + zsh，主要通过 Git、Node.js、pnpm 和命令行完成开发与发布。",
+				icon: "material-symbols:laptop-mac",
+				tags: ["macOS", "zsh", "pnpm"],
+			},
+			{
+				title: "博客技术栈",
+				description: "Astro 静态站点，GitHub 管理源码，Vercel 自动部署。",
+				icon: "material-symbols:web-asset",
+				tags: ["Astro", "GitHub", "Vercel"],
+			},
+			{
+				title: "域名与站点",
+				description: "使用独立域名承载博客，适合长期沉淀文章和项目记录。",
+				icon: "material-symbols:language",
+				tags: ["blog.xzggai.com", "静态站"],
+			},
+			{
+				title: "内容写作",
+				description: "Markdown 写作，配合 AI 做资料整理、结构优化和发布检查。",
+				icon: "material-symbols:markdown-outline-rounded",
+				tags: ["Markdown", "AI 写作"],
+			},
+		],
+	},
+	{
+		title: "维护原则",
+		items: [
+			{
+				title: "先验证再上线",
+				description: "每次改动先跑构建，再推送到线上，最后用线上地址确认结果。",
+				icon: "material-symbols:verified-outline-rounded",
+				tags: ["构建", "验证"],
+			},
+			{
+				title: "少留模板痕迹",
+				description: "公开页面尽量只保留自己的内容，测试数据和示例入口及时清理。",
+				icon: "material-symbols:cleaning-services-outline-rounded",
+				tags: ["维护", "内容质量"],
+			},
+		],
+	},
+];
+---
+
+<MyContentPage
+	title="我的配置"
+	description="记录这个博客和日常工作流用到的开发、写作与部署配置。"
+	icon="material-symbols:settings-outline-rounded"
+	sections={sections}
+/>

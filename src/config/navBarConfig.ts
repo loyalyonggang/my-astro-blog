@@ -46,11 +46,26 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 		url: "/my/",
 		icon: "material-symbols:person",
 		children: [
-			// 根据配置决定是否添加相册，在siteConfig关闭pages.gallery时导航栏不显示相册
-			...(siteConfig.pages.gallery ? [LinkPreset.Gallery] : []),
-
-			// 根据配置决定是否添加番组计划，在siteConfig关闭pages.bangumi时导航栏不显示番组计划
-			...(siteConfig.pages.bangumi ? [LinkPreset.Bangumi] : []),
+			{
+				name: "我的项目",
+				url: "/my/projects/",
+				icon: "material-symbols:apps",
+			},
+			{
+				name: "AI 工具箱",
+				url: "/my/ai-toolbox/",
+				icon: "material-symbols:smart-toy-outline-rounded",
+			},
+			{
+				name: "我的配置",
+				url: "/my/setup/",
+				icon: "material-symbols:settings-outline-rounded",
+			},
+			{
+				name: "收藏导航",
+				url: "/my/bookmarks/",
+				icon: "material-symbols:bookmark-manager-outline-rounded",
+			},
 		],
 	});
 

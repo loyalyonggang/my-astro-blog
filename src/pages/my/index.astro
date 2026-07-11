@@ -1,0 +1,51 @@
+---
+import MyContentPage from "@/components/pages/my/MyContentPage.astro";
+
+const sections = [
+	{
+		title: "常用入口",
+		description: "这里放和我个人工作流最相关的内容，方便访客快速了解我在做什么。",
+		items: [
+			{
+				title: "我的项目",
+				description: "整理已经上线、正在维护和准备公开的项目。",
+				icon: "material-symbols:apps",
+				link: "/my/projects/",
+				linkText: "查看项目",
+				tags: ["产品", "网站", "自动化"],
+			},
+			{
+				title: "AI 工具箱",
+				description: "记录常用 AI 工具、使用场景和可复用工作流。",
+				icon: "material-symbols:smart-toy-outline-rounded",
+				link: "/my/ai-toolbox/",
+				linkText: "查看工具",
+				tags: ["ChatGPT", "Codex", "效率"],
+			},
+			{
+				title: "我的配置",
+				description: "开发环境、部署链路、写作工具和常用软件配置。",
+				icon: "material-symbols:settings-outline-rounded",
+				link: "/my/setup/",
+				linkText: "查看配置",
+				tags: ["Mac", "Vercel", "Astro"],
+			},
+			{
+				title: "收藏导航",
+				description: "长期使用的开发、AI、设计和运营资源入口。",
+				icon: "material-symbols:bookmark-manager-outline-rounded",
+				link: "/my/bookmarks/",
+				linkText: "查看收藏",
+				tags: ["文档", "资源", "导航"],
+			},
+		],
+	},
+];
+---
+
+<MyContentPage
+	title="我的"
+	description="项目、工具、配置和收藏入口。"
+	icon="material-symbols:person"
+	sections={sections}
+/>

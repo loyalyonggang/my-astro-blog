@@ -1,0 +1,60 @@
+---
+import MyContentPage from "@/components/pages/my/MyContentPage.astro";
+
+const sections = [
+	{
+		title: "核心 AI 工具",
+		description: "按使用场景整理，而不是单纯堆工具名。",
+		items: [
+			{
+				title: "ChatGPT",
+				description: "用于选题拆解、资料梳理、文章结构、复杂问题推演和日常问答。",
+				icon: "material-symbols:chat-outline-rounded",
+				tags: ["写作", "研究", "问答"],
+			},
+			{
+				title: "Codex",
+				description: "用于本地项目改代码、跑构建、部署验证和处理重复工程任务。",
+				icon: "material-symbols:terminal-rounded",
+				tags: ["代码", "部署", "自动化"],
+			},
+			{
+				title: "图像生成工具",
+				description: "用于文章封面、配图、海报和视觉草图生成。",
+				icon: "material-symbols:image-outline-rounded",
+				tags: ["封面", "海报", "视觉"],
+			},
+			{
+				title: "搜索与资料工具",
+				description: "用于查证最新信息、对比产品资料和补充文章来源。",
+				icon: "material-symbols:travel-explore-rounded",
+				tags: ["搜索", "资料", "查证"],
+			},
+		],
+	},
+	{
+		title: "常用工作流",
+		items: [
+			{
+				title: "文章生产",
+				description: "选题 -> 搜索查证 -> 大纲 -> 案例 -> 成文 -> 发布 -> 复盘。",
+				icon: "material-symbols:edit-note-rounded",
+				tags: ["博客", "公众号"],
+			},
+			{
+				title: "项目上线",
+				description: "本地修改 -> 构建验证 -> Git 推送 -> Vercel 部署 -> 线上检查。",
+				icon: "material-symbols:rocket-launch-outline-rounded",
+				tags: ["Git", "Vercel"],
+			},
+		],
+	},
+];
+---
+
+<MyContentPage
+	title="AI 工具箱"
+	description="记录我常用的 AI 工具和可复用工作流。"
+	icon="material-symbols:smart-toy-outline-rounded"
+	sections={sections}
+/>
