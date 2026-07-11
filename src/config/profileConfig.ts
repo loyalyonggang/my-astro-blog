@@ -12,7 +12,7 @@ export const profileConfig: ProfileConfig = {
 	name: "学长刚蝈",
 
 	// 个人签名
-	bio: "记录技术、分享思考",
+	bio: "AI 工具、科技效率与实战记录",
 
 	// 链接配置
 	// 已经预装的图标集：fa7-brands，fa7-regular，fa7-solid，material-symbols，simple-icons

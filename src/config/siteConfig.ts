@@ -7,16 +7,16 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "我的博客",
+	title: "学长刚蝈的 AI 工具笔记",
 
 	// 站点副标题
-	subtitle: "记录技术与生活",
+	subtitle: "AI 科技工具与效率实践",
 
 	// 站点 URL
 	site_url: "https://blog.xzggai.com",
 
 	// 站点描述
-	description: "学长刚蝈的个人博客，记录技术实践、AI 工具和生活思考。",
+	description: "学长刚蝈的 AI 科技工具博客，记录 AI 工具、自动化流程、效率方法和真实使用案例。",
 
 	// 站点关键词
 	keywords: [
@@ -25,6 +25,9 @@ export const siteConfig: SiteConfig = {
 		"技术博客",
 		"AI",
 		"ChatGPT",
+		"AI 工具",
+		"自动化",
+		"效率工具",
 		"静态博客",
 	],
 
