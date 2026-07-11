@@ -16,17 +16,15 @@ export const siteConfig: SiteConfig = {
 	site_url: "https://blog.xzggai.com",
 
 	// 站点描述
-	description:
-		"Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+	description: "学长刚蝈的个人博客，记录技术实践、AI 工具和生活思考。",
 
 	// 站点关键词
 	keywords: [
-		"Firefly",
-		"Fuwari",
 		"Astro",
-		"ACGN",
 		"博客",
 		"技术博客",
+		"AI",
+		"ChatGPT",
 		"静态博客",
 	],
 
@@ -75,11 +73,11 @@ export const siteConfig: SiteConfig = {
 		// 4. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Logo" }
 		logo: {
 			type: "image",
-			value: "assets/images/firefly.png",
-			alt: "🍀",
+			value: "/assets/images/avatar.jpg",
+			alt: "学长刚蝈",
 		},
 		// 导航栏标题
-		title: "Firefly",
+		title: "学长刚蝈",
 		// 全宽导航栏，导航栏是否占满屏幕宽度
 		widthFull: false,
 		// 导航菜单对齐方式，left：左对齐，center：居中
@@ -137,7 +135,7 @@ export const siteConfig: SiteConfig = {
 	// bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
 	pages: {
 		// 友链页面开关
-		friends: true,
+		friends: false,
 		// 赞助页面开关
 		sponsor: true,
 		// 留言板页面开关，需要配置评论系统
