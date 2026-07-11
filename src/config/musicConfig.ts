@@ -38,7 +38,7 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 			{
 				server: "netease",
 				type: "song",
-				id: "29722582",
+				id: "3384823501",
 			},
 		],
 		// 认证 token（可选）
