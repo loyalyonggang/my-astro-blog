@@ -129,9 +129,31 @@ const managerConfigStr = JSON.stringify({
     }
 
     // ── Meting fetch ─────────────────────────────────────────
-    async function fetchMetingData() {
-        if (!config.meting) return;
-        var m = config.meting;
+    function normalizeMetingData(data) {
+        return data.map(function (item) {
+            return {
+                name: item.title || item.name || 'Unknown',
+                artist: item.author || item.artist || 'Unknown',
+                url: item.url,
+                pic: item.pic || item.cover || '',
+                lrc: item.lrc
+            };
+        });
+    }
+
+    function dedupePlaylist(playlist) {
+        var seen = {};
+        return playlist.filter(function (track) {
+            var key = [track.name, track.artist, track.url].join('|');
+            if (seen[key]) return false;
+            seen[key] = true;
+            return true;
+        });
+    }
+
+    async function fetchMetingSource(source) {
+        var base = config.meting || {};
+        var m = Object.assign({}, base, source || {});
         var apis = [m.api].concat(m.fallbackApis || []);
 
         for (var i = 0; i < apis.length; i++) {
@@ -150,21 +172,30 @@ const managerConfigStr = JSON.stringify({
                 var data = await res.json();
 
                 if (Array.isArray(data) && data.length > 0) {
-                    state.playlist = data.map(function (item) {
-                        return {
-                            name: item.title || item.name || 'Unknown',
-                            artist: item.author || item.artist || 'Unknown',
-                            url: item.url,
-                            pic: item.pic || item.cover || '',
-                            lrc: item.lrc
-                        };
-                    });
-                    return;
+                    return normalizeMetingData(data);
                 }
             } catch (e) {
                 console.warn('Meting API failed for ' + baseApi, e);
             }
         }
+        return [];
+    }
+
+    async function fetchMetingData() {
+        if (!config.meting) return;
+
+        var playlist = await fetchMetingSource(config.meting);
+        var extra = config.meting.extra || [];
+        for (var i = 0; i < extra.length; i++) {
+            var extraSongs = await fetchMetingSource(extra[i]);
+            playlist = playlist.concat(extraSongs);
+        }
+
+        if (playlist.length > 0) {
+            state.playlist = dedupePlaylist(playlist);
+            return;
+        }
+
         throw new Error('All Meting APIs failed');
     }
 

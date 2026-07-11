@@ -33,6 +33,14 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 		type: "playlist",
 		// 歌单/专辑/单曲 ID 或搜索关键词
 		id: "10046455237",
+		// 额外追加的歌曲
+		extra: [
+			{
+				server: "netease",
+				type: "song",
+				id: "29722582",
+			},
+		],
 		// 认证 token（可选）
 		auth: "",
 		// 备用 API 配置（当主 API 失败时使用）

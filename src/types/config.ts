@@ -750,6 +750,14 @@ export type MusicPlayerConfig = {
 		// 歌单/专辑/单曲 ID 或搜索关键词
 		id?: string;
 
+		// 额外追加的单曲/歌单/专辑配置
+		extra?: Array<{
+			server?: "netease" | "tencent" | "kugou" | "xiami" | "baidu";
+			type?: "song" | "playlist" | "album" | "search" | "artist";
+			id: string;
+			auth?: string;
+		}>;
+
 		// 认证 token（可选）
 		auth?: string;
 
